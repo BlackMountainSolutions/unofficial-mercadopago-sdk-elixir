@@ -7,11 +7,7 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps(),
-      files: ["lib", "mix.exs", "README", "LICENSE*"],
-      maintainers: ["Franco Montenegro"],
-      licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/BlackMountainSolutions/unofficial-mercadopago-sdk-elixir"}
+      deps: deps()
     ]
   end
 
@@ -30,6 +26,15 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:httpoison, "~> 1.6"},
       {:poison, "~> 3.1"}
+    ]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README", "LICENSE*"],
+      maintainers: ["Franco Montenegro"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/BlackMountainSolutions/unofficial-mercadopago-sdk-elixir"}
     ]
   end
 end
