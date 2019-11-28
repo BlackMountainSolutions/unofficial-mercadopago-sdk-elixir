@@ -14,9 +14,12 @@ defmodule UnofficialMercadopagoSdkElixir.Service.RestClient do
   end
 
   def get(uri, params) do
+    params_with_access_token = Map.merge(params, %{access_token: get_access_key()})
+    query = URI.encode_query(params_with_access_token)
+
     request =
       HTTPoison.get(
-        "#{get_url(uri)}?access_token=#{get_access_key()}",
+        "#{get_url(uri)}?#{query}",
         get_headers()
       )
 
