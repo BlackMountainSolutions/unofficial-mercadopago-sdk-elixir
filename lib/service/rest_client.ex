@@ -13,6 +13,17 @@ defmodule UnofficialMercadopagoSdkElixir.Service.RestClient do
     |> check_for_error
   end
 
+  def get(uri, params) do
+    request =
+      HTTPoison.get(
+        "#{get_url(uri)}?access_token=#{get_access_key()}",
+        get_headers()
+      )
+
+    request
+    |> decode_response
+  end
+
   defp get_access_key() do
     UnofficialMercadopagoSdkElixir.get_access_key()
   end
