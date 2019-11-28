@@ -17,7 +17,8 @@ end
 
 ## Usage
 
-Create preference
+## Preference
+### Create
 ```
 # Struct properties can be found here https://www.mercadopago.com.ar/developers/es/reference/preferences/resource/
 item = %{
@@ -32,6 +33,20 @@ preference = %{
 
 {status, response} = Service.Preference.create(preference)
 ```
+
+## Payment
+### Create
+```
+payment = %{...}
+Service.Payment.create(payment)
+```
+
+### Get payment by id
+```
+payment_id = ...
+Service.Payment.get(payment_id)
+```
+
 
 If everything is ok, status == :ok, otherwise it will be :error
 
