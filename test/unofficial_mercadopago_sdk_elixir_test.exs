@@ -1,6 +1,5 @@
 defmodule UnofficialMercadopagoSdkElixirTest do
   use ExUnit.Case
-  alias UnofficialMercadopagoSdkElixir.Dto, as: Dto
   alias UnofficialMercadopagoSdkElixir.Service, as: Service
 
   doctest UnofficialMercadopagoSdkElixir
@@ -11,13 +10,13 @@ defmodule UnofficialMercadopagoSdkElixirTest do
   end
 
   test "must allow to create preference with service" do
-    item = %Dto.Preference.Item{
+    item = %{
       title: "my product",
       unit_price: 100,
       quantity: 1
     }
 
-    preference = %Dto.Preference{
+    preference = %{
       items: [item]
     }
 
