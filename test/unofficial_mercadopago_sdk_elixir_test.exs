@@ -4,7 +4,7 @@ defmodule UnofficialMercadopagoSdkElixirTest do
 
   doctest UnofficialMercadopagoSdkElixir
 
-  test "get access key" do
+  test "must set access key in config" do
     config = Application.get_env(:unofficial_mercadopago_sdk_elixir, UnofficialMercadopagoSdkElixir, [])
     assert UnofficialMercadopagoSdkElixir.get_access_key() == config[:access_key]
   end
@@ -23,5 +23,10 @@ defmodule UnofficialMercadopagoSdkElixirTest do
     {status, response} = Service.Preference.create(preference)
     assert status == :ok
     assert response["client_id"] != nil
+  end
+
+  test "must fail if invalid data is sent" do
+    {status, _} = Service.Preference.create(nil)
+    assert status == :error
   end
 end
