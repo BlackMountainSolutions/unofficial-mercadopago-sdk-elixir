@@ -6,8 +6,12 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
       app: :unofficial_mercadopago_sdk_elixir,
       version: "0.1.0",
       elixir: "~> 1.9",
+      build_embedded: Mix.env == :prod,
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "Very thin layer to support MercadoPago operations.",
+      package: package(),
+      source_url: "https://github.com/BlackMountainSolutions/unofficial-mercadopago-sdk-elixir"
     ]
   end
 
@@ -31,7 +35,7 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README", "LICENSE*"],
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Franco Montenegro"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/BlackMountainSolutions/unofficial-mercadopago-sdk-elixir"}
