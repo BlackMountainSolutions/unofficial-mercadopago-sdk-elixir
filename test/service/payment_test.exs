@@ -16,6 +16,8 @@ defmodule UnofficialMercadopagoSdkElixirTest.PaymentTest do
   # end
 
   # test "must allow to get payments by id" do
-  #   assert 1 == 1
+  #   payment_id = ...
+  #   {status, response} = Service.Payment.get(payment_id)
+  #   assert status == :ok
   # end
 end

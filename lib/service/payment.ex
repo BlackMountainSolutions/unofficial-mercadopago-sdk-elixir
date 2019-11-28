@@ -7,7 +7,7 @@ defmodule UnofficialMercadopagoSdkElixir.Service.Payment do
   end
 
   def get(id) do
-    uri = "v1/payments"
-    RestClient.get(uri, %{id: id})
+    uri = "v1/payments/#{id}"
+    RestClient.get(uri, %{})
   end
 end
