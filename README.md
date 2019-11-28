@@ -1,6 +1,6 @@
 # UnofficialMercadopagoSdkElixir
 
-**TODO: Add description**
+Very thin layer to support MercadoPago operations.
 
 ## Installation
 
@@ -19,3 +19,12 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/unofficial_mercadopago_sdk_elixir](https://hexdocs.pm/unofficial_mercadopago_sdk_elixir).
 
+## Format
+The code is being formatted using the default formatter, ie `mix format`
+
+## Test
+To run the tests, first you need to rename the file in config/config.sample.exs to config/config.exs and update the access key.
+After that, you can run `mix test`
+
+## License
+MIT
