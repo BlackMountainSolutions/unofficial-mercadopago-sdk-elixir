@@ -34,17 +34,24 @@ preference = %{
 {status, response} = Service.Preference.create(preference)
 ```
 
+## PaymentMethod
+### List
+```
+optional_params = %{}
+{status, response} = Service.PaymentMethod.list(optional_params)
+```
+
 ## Payment
 ### Create
 ```
 payment = %{...}
-Service.Payment.create(payment)
+{status, response} = Service.Payment.create(payment)
 ```
 
 ### Get payment by id
 ```
 payment_id = ...
-Service.Payment.get(payment_id)
+{ status, response } = Service.Payment.get(payment_id)
 ```
 
 
