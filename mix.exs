@@ -18,7 +18,7 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      applications: [:httpoison],
+      applications: [:httpoison, :poison],
       extra_applications: [:logger]
     ]
   end
