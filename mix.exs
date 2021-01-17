@@ -4,7 +4,7 @@ defmodule UnofficialMercadopagoSdkElixir.MixProject do
   def project do
     [
       app: :unofficial_mercadopago_sdk_elixir,
-      version: "1.2.0",
+      version: "1.3.0",
       elixir: "~> 1.9",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
